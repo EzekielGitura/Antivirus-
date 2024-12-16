@@ -1,0 +1,27 @@
+# config/antivirus_config.yaml
+antivirus:
+  # Scanning configurations
+  scan_directories:
+    - "/home"
+    - "/tmp"
+  
+  # Performance settings
+  max_threads: 4
+  scan_depth: 3
+
+  # Threat detection thresholds
+  heuristic_thresholds:
+    suspicious_file_size_min: 1024  # 1KB
+    suspicious_file_size_max: 10485760  # 10MB
+    
+  # Logging configurations
+  log_directory: "./logs"
+  log_level: "INFO"
+
+  # Quarantine settings
+  quarantine_directory: "./quarantine"
+
+  # VirusTotal API configuration
+  virustotal:
+    api_key: ""  # User should replace with their API key
+    enable_check: false
